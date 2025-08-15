@@ -1,11 +1,11 @@
 /* CSS Variables for colors */
 :root {
-    --nav-bg: red;
-    --home-bg: red;
-    --about-bg: blue;
-    --projects-bg: green;
+    --nav-bg: white;
+    --home-bg: rgb(74, 33, 53);
+    --about-bg: pink;
+    --projects-bg: lightblue;
     --skills-bg: pink;
-    --contact-bg: purple;
+    --contact-bg: rgb(242, 163, 242);
 }
 
 /* CSS Variables for fonts */
@@ -51,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     background-color: var(--nav-bg);   
     padding: 1rem 2rem;
+    height: 4vh;
 }
 
 .nav-bar .logo{
@@ -82,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home{
-    height: 100vh;
+    height: 96vh;
     background-color: var(--home-bg);
     margin: 0;
     padding: 0;
@@ -92,11 +93,24 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 60%;
+    width: 60%;
     background-color: rgb(174, 174, 196); 
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 10%;
+}
+
+.intro{
+    background-color: burlywood;
+    height: 100%;
+    width: 50%;
+}
+
+.image{
+    background-color: cadetblue;
+    height: 100%;
+    width: 50%;
 }
 
 .about{
@@ -122,37 +136,80 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.heading{
-    margin: 0;
-    padding: 0;
+.projects-heading{
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .projects-content{
+    height: 85%;
+    width: 90%;
+    background-color: rgb(146, 142, 150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.card{
+    background-color:aquamarine;
+    height: 90%;
+    width: 30%;
+    border-radius: 24px;
+
+    
+}
+
+
+.contact{
+    height: 70vh;
+    background-color: var(--contact-bg);
+    margin: 0;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
+}
+
+.contact-inro{
+    background-color: blueviolet;
+    height: 100%;
+    width: 40%;
+}
+
+.send-email{
+    background-color: #fff;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.send-email form{
+    background-color: brown;
+    height: 100%;
     width: 100%;
-    background-color: rgb(174, 174, 196); 
-    border-radius: 10px;
-    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
-.skills{
-    height: 100vh;
-    background-color: var(--skills-bg);
-    margin: 0;
-    padding: 0;
-}
-
-.contact{
-    height: 100vh;
-    background-color: var(--contact-bg);
-    margin: 0;
-    padding: 0;
+.send-email .name,
+.send-email .email,
+.send-email .message {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
