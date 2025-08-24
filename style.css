@@ -1,215 +1,87 @@
-/* CSS Variables for colors */
-:root {
-    --nav-bg: white;
-    --home-bg: rgb(74, 33, 53);
-    --about-bg: pink;
-    --projects-bg: lightblue;
-    --skills-bg: pink;
-    --contact-bg: rgb(242, 163, 242);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* CSS Variables for fonts */
+/* CSS Variables for colors */
 :root {
-    --primary-font: 'Poppins', sans-serif;
-    --logo-font-size: 1.5rem;
-    --nav-font-size: 1.2rem;
-    --heading-font-size: 2rem;
-    --body-font-size: 1rem;
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
-    --font-weight-light: 300;
+    --primary-bg: #000000;
+    --text-primary: #ffffff;
+
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    font-family: var(--primary-font);
-}
-
-/* Remove default margins and padding from all sections */
-section, footer {
-    margin: 0;
-    padding: 0;
-    display: block;
-    line-height: 1;
-    overflow: hidden;
-}
-
-/* General heading styles using font variables */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--primary-font);
-    font-size: var(--heading-font-size);
-    font-weight: var(--font-weight-bold);
-    margin: 0;
-    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
 }
 
 
 .nav-bar{
+    /* background-color:burlywood; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--nav-bg);   
-    padding: 1rem 2rem;
-    height: 4vh;
+    padding: 15px 30px;
 }
 
-.nav-bar .logo{
+.nav-bar-menu{
+    /* background-color: burlywood; */
+    font-size: 20px;
+    display: flex;
+    gap: 40px;
     text-decoration: none;
-    color: inherit;
-    font-size: var(--logo-font-size);
-    font-weight: var(--font-weight-bold);
 }
 
-.nav-bar .nav-links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 2rem;
-}
-
-.nav-bar .nav-links a{
+.nav-bar-menu a{
     text-decoration: none;
-    color: inherit;
-    font-size: var(--nav-font-size);
-    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
 }
 
-.mobile-nav-toggle{
-    display: none;
-}
-
-.home{
-    height: 96vh;
-    background-color: var(--home-bg);
-    margin: 0;
-    padding: 0;
-}
-
-.home-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60%;
-    width: 60%;
-    background-color: rgb(174, 174, 196); 
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 10%;
-}
-
-.intro{
-    background-color: burlywood;
-    height: 100%;
-    width: 50%;
-}
-
-.image{
-    background-color: cadetblue;
-    height: 100%;
-    width: 50%;
-}
-
-.about{
-    height: 100vh;
-    background-color: var(--about-bg);
-    margin: 0;
-    padding: 0;
-}
-
-.about-content{
-    background-color:rgb(174, 174, 196);
-    height: 50%;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 10%;
-    border-radius: 10px;
-}
-
-.projects{
-    height: 100vh;
-    background-color: var(--projects-bg);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.projects-heading{
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.projects-content{
-    height: 85%;
-    width: 90%;
-    background-color: rgb(146, 142, 150);
+/* Section Styles */
+.home-page, .about-section, .projects-section, .contact-section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-
+    padding: 100px 20px 20px;
 }
 
-.card{
-    background-color:aquamarine;
-    height: 90%;
-    width: 30%;
-    border-radius: 24px;
-
-    
+.home-content, .about-content, .projects-content, .contact-content {
+    text-align: center;
+    max-width: 800px;
 }
 
-
-.contact{
-    height: 70vh;
-    background-color: var(--contact-bg);
-    margin: 0;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
-.contact-inro{
-    background-color: blueviolet;
-    height: 100%;
-    width: 40%;
+.home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
 }
 
-.send-email{
-    background-color: #fff;
-    height: 100%;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.about-section, .projects-section, .contact-section {
+    background-color: var(--secondary-bg);
 }
 
-.send-email form{
-    background-color: brown;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+.about-content h2, .projects-content h2, .contact-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
-.send-email .name,
-.send-email .email,
-.send-email .message {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.about-content p, .projects-content p, .contact-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
 }

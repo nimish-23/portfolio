@@ -1,85 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nimish Sinkar</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
     <header>
         <nav class="nav-bar">
-            <a href="#" class="logo">Nimish Sinkar</a>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <button class="mobile-nav-toggle"><i class="fa-solid fa-bars"></i></button>
+            <h2>Nimish Sinkar</h2>
+            <div class="nav-bar-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
-    <main>
-        <section class="home">
-            <div class="home-content">
-                <div class="intro">
-                    <p>Solving complex problems with data.</p>
-                    <div class="resume"><a href="#">resume</a></div>
-                </div>
-                <div class="image">
-                    image
-                </div>
-            </div>
-        </section>
-        <section class="about">
-            <div class="about-content">
-                about content
-            </div>
-        </section>
-        <section class="projects">
-            <div class="projects-heading">
-                <h1>Projects</h1>
-            </div>
-            <div class="projects-content">
-                <div class="card">
-                    card1
-                </div>
-                <div class="card">
-                    card2
-                </div>
-                <div class="card">
-                    card3
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="contact">
-        <div class="contact-inro">
-            <h1>lets contact</h1>
+    
+    <section class="home-page" id="home">
+        <div class="home-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Nimish Sinkar</p>
+            <p>Data Scientist & Developer</p>
         </div>
-        <div class="send-email">
-            <form action="#" method="post">
-                <div class="name">
-                    <label for="full-name">Full Name</label>
-                    <input type="text" id="fullname" name="fullname">
-                </div>
-                <div class="email">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="message">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6"></textarea>
-                </div>
-                <div class="sumbit">
-                    <button type="submit" class="sumbit-btn">Send</button>
-                </div>
-            </form>
+    </section>
+    
+   
+    
+    <section class="projects-section" id="projects">
+        <div class="projects-content">
+            <h2>My Projects</h2>
+            <p>Here are some of my recent projects.</p>
         </div>
-    </footer>
-</body>
+    </section>
 
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>I'm passionate about solving complex problems with data and technology.</p>
+        </div>
+    </section>
+    
+    <section class="contact-section" id="contact">
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <p>Get in touch with me.</p>
+        </div>
+    </section>s
+</body>
 </html>
