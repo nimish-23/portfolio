@@ -328,7 +328,7 @@ a {
 }
 
 .container {
-    margin-top: 10vh;
+    margin-top:2rem ;
     height: 65%;
     width: 70%;
     display: flex;
