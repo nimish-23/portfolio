@@ -20,7 +20,7 @@ body {
     color: var(--text-primary);
 }
 
-
+/* Nav-Bar */
 .nav-bar {
     height: 9vh;
     position: fixed;
@@ -104,6 +104,7 @@ body {
     display: none;
 }
 
+/* Home-Section */
 .home-content {
     padding: 20px;
     margin-top: 9vh;
@@ -114,7 +115,6 @@ body {
 }
 
 .intro {
-    /* background-color:darkblue; */
     height: 70%;
     width: 50%;
     text-align: left;
@@ -124,7 +124,6 @@ body {
 }
 
 .intro p {
-
     line-height: 1.25;
     margin-bottom: 16px;
 }
@@ -177,14 +176,20 @@ body {
 }
 
 .home-image {
-    background-color: rgb(55, 53, 53);
     height: 70%;
     width: 30%;
     border-radius: 24px;
 }
 
+.home-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 45% 25% 40% 25%;
+}
+
+/* Project-Section */
 .projects-content {
-    /* background-color: crimson; */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -198,23 +203,26 @@ body {
 
 .card {
     background-color: rgb(34, 30, 30);
-    height: 40vh;
+    height: 38vh;
     width: 65vw;
     margin-top: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
     gap: 10px;
     overflow: hidden;
     border-radius: 24px;
 }
 
 .card-text {
-    height: 90%;
+    height: 100%;
     width: 50%;
     border-radius: 16px;
     padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-text h3 {
@@ -222,7 +230,7 @@ body {
 }
 
 .card-text p {
-    margin-top: 5vh;
+    margin-top: 1rem;
     font-size: 1.2rem;
     line-height: 20px;
 }
@@ -230,7 +238,7 @@ body {
 .card-btn {
     display: flex;
     gap: 1rem;
-    margin-top: 10vh;
+    margin-top: 2rem;
 }
 
 .card-btn a {
@@ -252,9 +260,10 @@ body {
 }
 
 .card-image {
-    height: 90%;
+    height: 100%;
     width: 50%;
     border-radius: 16px;
+    padding: 10px;
 }
 
 .card-image img {
@@ -264,6 +273,7 @@ body {
     border-radius: 24px;
 }
 
+/* About-Section */
 .about-content {
     min-height: 100vh;
     display: flex;
@@ -338,6 +348,8 @@ body {
     border-radius: 24px;
 }
 
+
+/* Contact-Section */
 .contact-content {
     min-height: 50vh;
     display: flex;
@@ -383,10 +395,10 @@ body {
 #linkdin:hover,
 #instagram:hover,
 #github:hover {
-    transform: scale(1.2);  
+    transform: scale(1.2);
 }
 
-
+/* Footer-Section */
 footer p {
     display: flex;
     justify-content: center;
@@ -418,6 +430,12 @@ footer p {
         width: 100%;
         height: auto;
         padding: 20px;
+    }
+
+    .home-image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     .intro {
@@ -452,22 +470,31 @@ footer p {
 
     .card {
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0;
         height: auto;
         width: 90vw;
-        gap: 16px;
     }
 
     .card-text {
         width: 100%;
         height: auto;
         padding: 20px;
+        text-align: center;
+        /* background-color: #d6249f; */
     }
 
     .card-image {
         width: 100%;
         height: auto;
-        padding: 20px;
         order: -1;
+        margin-top: 10px;
+    }
+
+    .card-btn {
+        justify-content: center;
+        margin-bottom: 20px;
     }
 
     .container {
