@@ -20,6 +20,48 @@ body {
     color: var(--text-primary);
 }
 
+
+h1,
+h2,
+h3,
+.project-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #0ff;
+    /* neon cyan */
+    /* text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; */
+}
+
+p,
+li,
+.about-text,
+.project-description {
+    font-family: 'Exo 2', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+button,
+.btn,
+a.button {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    color: black;
+    background-color: #0ff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+a.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+a {
+    font-family: 'Orbitron', sans-serif;
+}
+
 /*============================================================================   Nav-Bar   ===============================================================================================*/
 .nav-bar {
     height: 9vh;
@@ -176,7 +218,7 @@ body {
 
 .home-image {
     height: 70%;
-    width: 30%;
+    width: 31%;
     border-radius: 24px;
 }
 
@@ -184,12 +226,12 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 45% 25% 40% 25%;
+    /* border-radius: 45% 25% 40% 25%; */
 }
 
 /*==================================================================================    Project-Section   =============================================================================== */
 .projects-content {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -470,15 +512,18 @@ footer p {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 0;
+        gap: 1rem;
         height: auto;
         width: 90vw;
+        justify-content: flex-start;
+        overflow: visible;
+        padding-bottom: 1rem;
     }
 
     .card-text {
         width: 100%;
-        height: auto;
-        padding: 20px;
+        /* height: auto;
+        padding: 20px; */
         text-align: center;
     }
 
@@ -491,7 +536,7 @@ footer p {
 
     .card-btn {
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
     }
 
     .container {
@@ -514,4 +559,20 @@ footer p {
         text-align: center;
     }
 
+    .contact-content {
+        min-height: auto;
+        padding: 0 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-content h2 {
+        margin-top: 5vh;
+        font-size: 2.3rem;
+        width: 100%;
+    }
+
+    footer{
+        margin-top: 3rem;
+    }
 }

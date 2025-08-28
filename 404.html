@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page</title>
+</head>
+<style>
+    .error-page {
+        background: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .error-container {
+        text-align: center;
+    }
+
+    .glitch {
+        font-size: 6rem;
+        color: #0ff;
+        position: relative;
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+
+    /* Glitch layers */
+    .glitch::before,
+    .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        color: #f0f;
+        clip: rect(0, 900px, 0, 0);
+    }
+
+    .glitch::before {
+        left: 2px;
+        text-shadow: -2px 0 magenta;
+        animation: glitchTop 2s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+        left: -2px;
+        text-shadow: -2px 0 lime;
+        animation: glitchBottom 1.5s infinite linear alternate-reverse;
+    }
+
+    /* Glitch animations */
+    @keyframes glitchTop {
+        0% {
+            clip: rect(0, 9999px, 0, 0);
+        }
+
+        20% {
+            clip: rect(0, 9999px, 50px, 0);
+        }
+
+        40% {
+            clip: rect(0, 9999px, 20px, 0);
+        }
+
+        60% {
+            clip: rect(0, 9999px, 70px, 0);
+        }
+
+        80% {
+            clip: rect(0, 9999px, 30px, 0);
+        }
+
+        100% {
+            clip: rect(0, 9999px, 0, 0);
+        }
+    }
+
+    @keyframes glitchBottom {
+        0% {
+            clip: rect(0, 9999px, 0, 0);
+        }
+
+        20% {
+            clip: rect(40px, 9999px, 80px, 0);
+        }
+
+        40% {
+            clip: rect(10px, 9999px, 60px, 0);
+        }
+
+        60% {
+            clip: rect(30px, 9999px, 90px, 0);
+        }
+
+        80% {
+            clip: rect(50px, 9999px, 100px, 0);
+        }
+
+        100% {
+            clip: rect(0, 9999px, 0, 0);
+        }
+    }
+
+    .home-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background: #0ff;
+        color: black;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .home-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+
+    p{
+        font-size: 1.8rem;
+    }
+</style>
+
+<body class="error-page">
+    <div class="error-container">
+        <h1 class="glitch" data-text="404">404</h1>
+        <p>Oops! The page you’re looking for doesn’t exist.</p>
+        <a href="index.html" class="home-btn">Go Back Home</a>
+    </div>
+</body>
+
+
+</html>
